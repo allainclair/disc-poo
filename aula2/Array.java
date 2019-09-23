@@ -10,9 +10,9 @@ public class Array {
 
     // Esta eh uma forma de definir atributos da classe.
     // Temos outros tipos de arrays jah dinamicos.
-    //private int values[] = new int[this.MAX];
+    private int values[] = new int[this.MAX];
     private int length;
-    private int values[this.MAX];
+    //private int values[this.MAX];
 
     // Metodos sao a interface de como outros objetos manipulam este objeto.
     // Por isso de forma geral devem ser publicos.
@@ -23,11 +23,16 @@ public class Array {
         this.length = 0;
     }
 
-    public void append(int value) {
+    public int append(int value) {
         // a palavra "this" referencia o atributo do proprio objeto quando
         // instanciado.
-        this.values[this.length] = value;
-        this.length++;
+
+        // Caso array esteja completo.
+        if (this.length >= this.MAX)
+            return -1;
+
+        this.values[this.length++] = value;
+        return this.length - 1;
     }
 
     public int getLength() {
@@ -35,13 +40,20 @@ public class Array {
     }
 
     public static void main(String[] args) {
-        Array array = new Array();  // Criacao do objeto (ou instancia).
+        Array array1 = new Array();  // Criacao do objeto (ou instancia).
+        Array array2 = new Array();
 
-        for (int i=0;i<10;i++)
-            array.append(i*10);
+        for (int i=0;i<10;i++) {
+            array1.append(i*10);
+            array2.append(i*100);
+        }
 
-        System.out.println("array.length " + array.getLength());
-        for (int i=0;i<10;i++)
-            System.out.println("Element " + array.values[i]);
+        System.out.println("array1.length " + array1.getLength());
+        System.out.println("array2.length " + array2.getLength());
+
+        for (int i=0;i<10;i++) {
+            System.out.println("Element array1 " + array1.values[i]);
+            System.out.println("Element array2 " + array2.values[i]);
+        }
     }
 }

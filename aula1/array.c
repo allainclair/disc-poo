@@ -30,6 +30,7 @@ int main() {
     array.append(1);
     array.append(2);
     array.append(3);
+    //array [1, 2, 3]
 
     for (int i=0; i<array.length(); i++) {
         printf("%d ", array.get_value(i));
