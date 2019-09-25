@@ -1,9 +1,10 @@
-// Extnder para "Person".
+// Estender para "Person".
 
 public class Name {
-    String name;
+    private String name;
 
     public Name(String name) {
+        String str = "string";
         this.name = name;
     }
 
