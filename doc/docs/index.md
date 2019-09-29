@@ -1,5 +1,9 @@
 ## Programação Orientada a Objetos
 
+## Avisos
+
+* Aula 30 de setembro de 2019: terminem o execício da [aula 4](aula4.md)
+
 ## Professor
 
 * Site da disciplina: [http://allainclair.github.io/disc-poo](
