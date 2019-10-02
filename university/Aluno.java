@@ -20,7 +20,12 @@ public class Aluno {
     }
 
     public void adicionarDisciplina(Disciplina disciplina) {
-        disciplinas.add(disciplina);
+        this.disciplinas.add(disciplina);
+        System.out.println("Disciplina '" + disciplina.getNome() + "' adcionada.");
+    }
+
+    public String getNome() {
+        return this.nome;
     }
 
     public void print() {
@@ -31,7 +36,7 @@ public class Aluno {
     }
 
     public void printDisciplinas() {
-        for (Disciplina disciplina : disciplinas)
+        for (Disciplina disciplina : this.disciplinas)
             disciplina.print();
     }
 
@@ -39,8 +44,10 @@ public class Aluno {
         Aluno aluno1 = new Aluno("email@g.com", "Joao", 123456, "joao123");
         Disciplina disciplina1 = new Disciplina(60, 1010, "Prog. Funcional");
         Disciplina disciplina2 = new Disciplina(55, 2010, "Prog. Logica");
+        Disciplina disciplina3 = new Disciplina(50, 1234, "Sist. Operacionais");
         aluno1.adicionarDisciplina(disciplina1);
         aluno1.adicionarDisciplina(disciplina2);
+        aluno1.adicionarDisciplina(disciplina3);
         aluno1.print();
         aluno1.printDisciplinas();
     }
