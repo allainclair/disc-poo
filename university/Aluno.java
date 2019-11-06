@@ -6,7 +6,7 @@ public class Aluno {
     private String nome;
     private int ra_numero;
     private String senha;
-    private ArrayList<Disciplina> disciplinas = new ArrayList<Disciplina>();
+    private ArrayList<Disciplina> disciplinas = new ArrayList<>();
 
     public Aluno(String email, String nome, int ra_numero, String senha) {
         this.email = email;
